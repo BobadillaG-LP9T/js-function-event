@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Functions and Events</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+	<style type="text/css">
+		.container{
+			border: 1px solid black;
+			width: 400px;
+			margin: 10px;
+			padding: 15px;
+			border-radius: 8px;
+			box-shadow: -16px 5px 27px -6px rgba(140,145,142,0.75);
+			-webkit-box-shadow: -16px 5px 27px -6px rgba(140,145,142,0.75);
+			-moz-box-shadow: -16px 5px 27px -6px rgba(140,145,142,0.75);
+		}
+		body{
+			font-family: Times New Roman;t
+		}
+		h3{
+			font-weight: bolder;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+			<label form="EnterNumber1">Enter First Number</label>
+			<input type="number" name="num1" id="box1">
+			<br>
+			<label form="EnterNumber2">Enter Second Number</label>
+			<input type="number" name="num2" id="box2">
+		<h3 id="sum"></h3>
+		<h3 id="difference"></h3>
+		<h3 id="product"></h3>
+		<h3 id="quotient"></h3>
+		<button type="Submit" class="btn btn-success btn-sm" onclick="addition()">Add</button>
+		<button type="Submit" class="btn btn-danger btn-sm" onclick="subtraction()">Subtract</button>
+		<button type="Submit" class="btn btn-primary btn-sm" onclick="multiplication()">Multiply</button>
+		<button type="Submit" class="btn btn-dark btn-sm" onclick="division()">Divide</button>
+	</div>
+	<script type="text/javascript">
+		function addition() {
+			var num1 = document.getElementById("box1").value;
+			var num2 = document.getElementById("box2").value;
+			var sum = Number(num1) + Number(num2);
+			document.getElementById("sum").innerHTML="The sum is " + sum;
+		}
+		function subtraction() {
+			var num1 = document.getElementById("box1").value;
+			var num2 = document.getElementById("box2").value;
+			var difference = Number(num1) - Number(num2);
+			document.getElementById("difference").innerHTML="The difference is " + difference;
+		}
+		function multiplication() {
+			var num1 = document.getElementById("box1").value;
+			var num2 = document.getElementById("box2").value;
+			var product = Number(num1) * Number(num2);
+			document.getElementById("product").innerHTML="The product is " + product;
+		}
+		function division() {
+			var num1 = document.getElementById("box1").value;
+			var num2 = document.getElementById("box2").value;
+			var quotient = Number(num1) / Number(num2);
+			document.getElementById("quotient").innerHTML="The quotient is " + quotient;
+		}
+	</script>
+</body>
+</html>
